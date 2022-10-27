@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>maqola</title>
+</head>
+<body>
+{% for i in news%}
+<h1></h1>
+<h1>{{i.id}} {{i.sarlavha}} {{i.idsana}} {{i.mavzu}}</h1>
+{% endfor %}
+
+<form action="/add-News/" method="post"> {% csrf_token %}
+<input type="text" placeholder="sarlavha" name="sarlavha">
+<input type="datetime-local" placeholder="sana" name="sana">
+<input type="text" placeholder="mavzu" name="mavzu">
+<button type="sumbit">Create</button>
+</form>
+</body>
+</html>
